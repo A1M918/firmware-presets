@@ -1,3 +1,11 @@
+#$ TITLE: A1M918's 4.2 OSD settings
+#$ FIRMWARE_VERSION: 4.2
+#$ CATEGORY: OSD
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: Custom, reset, OSD
+#$ AUTHOR: A1M918
+#$ DESCRIPTION: Resets the OSD values back to Betaflight 4.2 defaults
+
 set osd_warn_link_quality = ON
 set osd_vbat_pos = 2465
 set osd_tim_1_pos = 2145
