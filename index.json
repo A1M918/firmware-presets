@@ -478,7 +478,7 @@
   "presets": [
     {
       "fullPath": "presets/4.2/defaults/defaults.txt",
-      "hash": "a37f681b0a931cd5120dfa42b199b1756e0ed4381e078ae57a0b64af6311f62b",
+      "hash": "0a9edf48266e433d07b2a48b6a30e9ae9d14969c623f4a9d0c5314942b34cadc",
       "title": "A1M918's 4.2 PERSONAL settings",
       "firmware_version": [
         "4.2"
@@ -892,7 +892,7 @@
     },
     {
       "fullPath": "presets/4.2/osd/A1M918.txt",
-      "hash": "9d6af4134345b20364da1e52691c53d3e06cb2c65a7b449d7f646e585d7673eb",
+      "hash": "76b86126d89152bf5934a545cdf1c66581468b9d1bfc16ad82ef41436911beda",
       "title": "A1M918's 4.2 OSD settings",
       "firmware_version": [
         "4.2"
