@@ -2,7 +2,7 @@
 #$ FIRMWARE_VERSION: 4.2
 #$ CATEGORY: OTHER
 #$ STATUS: COMMUNITY
-#$ KEYWORDS: Custom, reset
+#$ KEYWORDS: Custom, reset, tinyhawk
 #$ AUTHOR: A1M918
 #$ DESCRIPTION: Resets the values back to A1M918 4.2 defaults
 
