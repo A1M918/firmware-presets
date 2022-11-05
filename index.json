@@ -437,6 +437,7 @@
       "Throttle cap",
       "tiny",
       "tiny tank",
+      "tinyhawk",
       "TinyTrainer",
       "toothpic",
       "Toothpick",
@@ -477,7 +478,7 @@
   "presets": [
     {
       "fullPath": "presets/4.2/defaults/defaults.txt",
-      "hash": "97a639b20ce60b3ff562d1ae67b491c360012d26f10898d97755b0d47e44d545",
+      "hash": "a37f681b0a931cd5120dfa42b199b1756e0ed4381e078ae57a0b64af6311f62b",
       "title": "A1M918's 4.2 PERSONAL settings",
       "firmware_version": [
         "4.2"
@@ -486,7 +487,8 @@
       "status": "COMMUNITY",
       "keywords": [
         "Custom",
-        "reset"
+        "reset",
+        "tinyhawk"
       ],
       "author": "A1M918",
       "priority": 0
@@ -847,6 +849,27 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/4.2/modes/A1m918.txt",
+      "hash": "fde3cd5d43525c9d91f4027ccd84bd67bf9d2f0aa540d59e3360cd250f722645",
+      "title": "Default 4.2 Modes and Adjustment settings",
+      "firmware_version": [
+        "4.2"
+      ],
+      "category": "MODES",
+      "status": "COMMUNITY",
+      "keywords": [
+        "defaults",
+        "reset",
+        "mode",
+        "modes",
+        "adjustments",
+        "aux",
+        "switch"
+      ],
+      "author": "A1M918",
+      "priority": 0
+    },
+    {
       "fullPath": "presets/4.2/modes/defaults.txt",
       "hash": "16a19e27a46efcd9f86d56f17e8fe82356921399cc0c5502e257e33ef8c321c3",
       "title": "Default 4.3 Modes and Adjustment settings",
@@ -869,7 +892,7 @@
     },
     {
       "fullPath": "presets/4.2/osd/A1M918.txt",
-      "hash": "9c2e77375fbd17fc8eb59c85d2505113037051ea7d0a2e98fde0525650ba92a6",
+      "hash": "9d6af4134345b20364da1e52691c53d3e06cb2c65a7b449d7f646e585d7673eb",
       "title": "A1M918's 4.2 OSD settings",
       "firmware_version": [
         "4.2"
