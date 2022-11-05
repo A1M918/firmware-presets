@@ -476,6 +476,22 @@
   },
   "presets": [
     {
+      "fullPath": "presets/4.2/defaults/defaults.txt",
+      "hash": "97a639b20ce60b3ff562d1ae67b491c360012d26f10898d97755b0d47e44d545",
+      "title": "A1M918's 4.2 PERSONAL settings",
+      "firmware_version": [
+        "4.2"
+      ],
+      "category": "OTHER",
+      "status": "COMMUNITY",
+      "keywords": [
+        "Custom",
+        "reset"
+      ],
+      "author": "A1M918",
+      "priority": 0
+    },
+    {
       "fullPath": "presets/4.2/filters/basic_no_rpm_clean.txt",
       "hash": "c0bd2461401e586a4bdb5bf104db999a11bf8341762dbe509adf2d676f5b4412",
       "title": "4.3 Filter settings for CLEAN build WITH NO RPM FILTERING.",
