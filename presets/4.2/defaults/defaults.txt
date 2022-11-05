@@ -262,6 +262,7 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
+feature MOTOR_STOP
 feature DISPLAY
 feature OSD
 feature AIRMODE
@@ -410,12 +411,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 900 1200 0 0
+aux 2 2 1 1325 1600 0 0
+aux 3 13 0 1300 1700 0 0
+aux 4 30 1 1300 2100 0 0
+aux 5 47 2 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -513,7 +514,7 @@ set gyro_hardware_lpf = NORMAL
 set gyro_lowpass_type = PT1
 set gyro_lowpass_hz = 200
 set gyro_lowpass2_type = PT1
-set gyro_lowpass2_hz = 250
+set gyro_lowpass2_hz = 500
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -525,12 +526,12 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
-set dyn_notch_width_percent = 8
-set dyn_notch_q = 120
-set dyn_notch_min_hz = 150
-set dyn_notch_max_hz = 600
-set dyn_lpf_gyro_min_hz = 200
-set dyn_lpf_gyro_max_hz = 500
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 250
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
@@ -545,14 +546,14 @@ set mag_bustype = SPI
 set mag_i2c_device = 0
 set mag_i2c_address = 0
 set mag_spi_device = 0
-set mag_hardware = AUTO
+set mag_hardware = NONE
 set mag_declination = 0
 set mag_calibration = 0,0,0
 set baro_bustype = SPI
 set baro_spi_device = 0
 set baro_i2c_device = 0
 set baro_i2c_address = 0
-set baro_hardware = AUTO
+set baro_hardware = NONE
 set baro_tab_size = 21
 set baro_noise_lpf = 600
 set baro_cf_vel = 985
@@ -628,7 +629,7 @@ set align_board_roll = 0
 set align_board_pitch = 0
 set align_board_yaw = 0
 set gimbal_mode = NORMAL
-set bat_capacity = 0
+set bat_capacity = 450
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
 set vbat_min_cell_voltage = 330
@@ -647,10 +648,10 @@ set vbat_sag_lpf_period = 2
 set ibat_lpf_period = 10
 set vbat_duration_for_warning = 0
 set vbat_duration_for_critical = 0
-set vbat_scale = 110
+set vbat_scale = 107
 set vbat_divider = 10
 set vbat_multiplier = 1
-set ibata_scale = 179
+set ibata_scale = 13
 set ibata_offset = 0
 set ibatv_scale = 0
 set ibatv_offset = 0
@@ -716,7 +717,7 @@ set gps_rescue_use_mag = ON
 set deadband = 0
 set yaw_deadband = 0
 set yaw_control_reversed = OFF
-set pid_process_denom = 1
+set pid_process_denom = 2
 set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
@@ -805,25 +806,25 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2465
+set osd_vbat_pos = 2369
 set osd_rssi_pos = 234
 set osd_link_quality_pos = 234
 set osd_rssi_dbm_pos = 234
-set osd_tim_1_pos = 2145
-set osd_tim_2_pos = 14401
-set osd_remaining_time_estimate_pos = 2104
-set osd_flymode_pos = 2488
+set osd_tim_1_pos = 2113
+set osd_tim_2_pos = 14369
+set osd_remaining_time_estimate_pos = 2133
+set osd_flymode_pos = 2425
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 2433
+set osd_throttle_pos = 2337
 set osd_vtx_channel_pos = 234
-set osd_crosshairs_pos = 2253
+set osd_crosshairs_pos = 2285
 set osd_ah_sbar_pos = 206
-set osd_ah_pos = 2126
+set osd_ah_pos = 2190
 set osd_current_pos = 234
 set osd_mah_drawn_pos = 2100
 set osd_motor_diag_pos = 234
-set osd_craft_name_pos = 2122
+set osd_craft_name_pos = 2123
 set osd_display_name_pos = 234
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
@@ -840,12 +841,12 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14665
+set osd_warnings_pos = 14698
 set osd_avg_cell_voltage_pos = 234
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 2088
-set osd_disarmed_pos = 2442
+set osd_disarmed_pos = 2379
 set osd_nheading_pos = 234
 set osd_nvario_pos = 234
 set osd_esc_tmp_pos = 234
@@ -914,7 +915,7 @@ set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vtx_spi_bus = 0
-set vcd_video_system = AUTO
+set vcd_video_system = NTSC
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = DEFAULT
@@ -1007,13 +1008,13 @@ profile 0
 
 # profile 0
 set profile_name = -
-set dyn_lpf_dterm_min_hz = 70
-set dyn_lpf_dterm_max_hz = 170
+set dyn_lpf_dterm_min_hz = 77
+set dyn_lpf_dterm_max_hz = 187
 set dyn_lpf_dterm_curve_expo = 5
 set dterm_lowpass_type = PT1
-set dterm_lowpass_hz = 150
+set dterm_lowpass_hz = 165
 set dterm_lowpass2_type = PT1
-set dterm_lowpass2_hz = 150
+set dterm_lowpass2_hz = 165
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
 set vbat_pid_gain = OFF
@@ -1022,7 +1023,7 @@ set pid_at_min_throttle = ON
 set anti_gravity_mode = SMOOTH
 set anti_gravity_threshold = 250
 set anti_gravity_gain = 3500
-set feedforward_transition = 0
+set feedforward_transition = 100
 set acc_limit_yaw = 0
 set acc_limit = 0
 set crash_dthreshold = 50
@@ -1049,18 +1050,18 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 46
-set i_pitch = 90
-set d_pitch = 38
-set f_pitch = 95
-set p_roll = 42
-set i_roll = 85
-set d_roll = 35
-set f_roll = 90
-set p_yaw = 45
-set i_yaw = 90
+set p_pitch = 56
+set i_pitch = 99
+set d_pitch = 59
+set f_pitch = 125
+set p_roll = 51
+set i_roll = 94
+set d_roll = 55
+set f_roll = 119
+set p_yaw = 55
+set i_yaw = 99
 set d_yaw = 0
-set f_yaw = 90
+set f_yaw = 119
 set angle_level_strength = 50
 set horizon_level_strength = 50
 set horizon_transition = 75
@@ -1073,8 +1074,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 23
-set d_min_pitch = 25
+set d_min_roll = 36
+set d_min_pitch = 40
 set d_min_yaw = 0
 set d_min_boost_gain = 37
 set d_min_advance = 20
